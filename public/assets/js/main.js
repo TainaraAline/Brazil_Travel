@@ -16,13 +16,19 @@ async function addCarouselImages(){
     images.forEach((image, index) => {
         const item = document.createElement('li')
         item.classList.add('glide__slide')
+        item.innerHTML = `
+            <div class="glide__card">
+                <img src="/assets/images/${image.file}" alt="${image.name}" class="glide__image" />
+                <h5 class="glide__card-title">${image.name}</h5>
+            </div>
+        `
 
-        const img = document.createElement('img')
-        img.classList.add('glide__image')
-        img.src = `/assets/images/${image.file}`
-        img.alt = image.name
+        // const img = document.createElement('img')
+        // img.classList.add('glide__image')
+        // img.src = `/assets/images/${image.file}`
+        // img.alt = image.name
 
-        item.appendChild(img)
+        // item.appendChild(img)
         carouselUl.appendChild(item)
 
         // const bullet = document.createElement('button')

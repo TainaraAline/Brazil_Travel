@@ -42,7 +42,6 @@
 
         <!-- <div class="glide__bullets" data-glide-el="controls[nav]"></div> -->
       </div>
-      <p class="destinations_hint">Click to expand</p>
     </main>
     <section class="contact">
       <h2 class="contact_title">Contact us</h2>
@@ -52,24 +51,24 @@
       </p>
       <form action="" class="contact_form">
         <div class="input_container">
-          <input type="text" class="input" id="name" />
           <label for="name" class="input_label">Name</label>
+          <input type="text" class="input" id="name" />
         </div>
         <div class="input_container">
-          <input type="email" class="input" id="email" />
           <label for="email" class="input_label">Email</label>
+          <input type="email" class="input" id="email" />
         </div>
         <div class="input_container">
-          <input type="text" class="input" id="start_date" />
           <label for="start_date" class="input_label">Start date</label>
+          <input type="text" class="input" id="start_date" />
         </div>
         <div class="input_container">
-          <input type="text" class="input" id="end_date" />
           <label for="end_date" class="input_label">End date</label>
+          <input type="text" class="input" id="end_date" />
         </div>
         <button
           type="submit"
-          class="contact_submit"
+          class="btn contact_submit"
           data-micromodal-trigger="modal"
         >
           Send
@@ -78,12 +77,14 @@
           <div tabindex="-1" data-micromodal-close class="modal_overlay">
             <div role="dialog" aria-modal="true" class="modal_content">
               <button
-                class="btn"
+                class="btn modal_close"
                 aria-label="Close modal"
                 data-micromodal-close
-              ></button>
-              <h3 class="dialog_title">Thank you!</h3>
-              <p class="dialog_description">
+              >
+                &times;
+              </button>
+              <h3 class="modal_title">Thank you!</h3>
+              <p class="modal_description">
                 We will contact you to make your wish come true!
               </p>
             </div>
