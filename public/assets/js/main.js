@@ -18,7 +18,7 @@ async function addCarouselImages(){
         item.classList.add('glide__slide')
         item.innerHTML = `
             <div class="glide__card">
-                <img src="/assets/images/${image.file}" alt="${image.name}" class="glide__image" />
+                <img src="./assets/images/${image.file}" alt="${image.name}" class="glide__image" />
                 <h5 class="glide__card-title">${image.name}</h5>
             </div>
         `
