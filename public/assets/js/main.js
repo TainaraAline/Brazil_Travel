@@ -1,7 +1,7 @@
 // Functions to add the images on the carousel
 // The first one is to read data from json
 async function getCarouselImages() {
-    const response = await fetch("/assets/js/carouselImages.json")
+    const response = await fetch("./assets/js/carouselImages.json")
 
     return response.json()
 }
@@ -13,7 +13,7 @@ async function addCarouselImages(){
 
     const images = await getCarouselImages()
 
-    images.forEach((image, index) => {
+    images.forEach((image) => {
         const item = document.createElement('li')
         item.classList.add('glide__slide')
         item.innerHTML = `
