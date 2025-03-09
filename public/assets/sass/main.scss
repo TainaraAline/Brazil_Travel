@@ -20,6 +20,7 @@ body {
   display: grid;
   grid-template-rows: 85vh 100vh max-content;
 }
+
 .hero {
   background-image: url(../images/cover\ RJ.webp);
   background-size: cover;
@@ -29,20 +30,96 @@ body {
   align-items: center;
   justify-content: center;
 }
+
 .destinations {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
+
   &_title {
     font-family: $font-primary;
     font-size: 5rem;
+    margin-bottom: 4rem;
   }
+
   &_hint {
     font-size: 1.6rem;
+    margin-top: 1rem;
   }
 }
-.glide__image {
-  width: 20vw;
-  height: 50vh;
+
+.glide {
+  width: 80%;
+  max-width: 80rem;
+
+  &__slide {
+    display: flex;
+    justify-content: center;
+  }
+
+  &__arrow {
+    background: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    font-size: 18px;
+    cursor: pointer;
+    border-radius: 5px;
+  }
+
+  &__bullet {
+    background-color: #ddd;
+    border: none;
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    margin: 5px;
+    cursor: pointer;
+  }
+
+  &__bullet--active {
+    background-color: #333;
+  }
+
+  &__image {
+    width: auto;
+    max-width: 62rem;
+    height: 50vh;
+    border-radius: 1rem;
+    object-fit: cover;
+  }
+}
+
+.modal {
+  &_overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.6);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 10;
+  }
+
+  &_content {
+    background-color: #fff;
+    padding: 30px;
+    max-width: 500px;
+    max-height: 100vh;
+    border-radius: 4px;
+    overflow-y: auto;
+    box-sizing: border-box;
+  }
+}
+
+.micromodal-slide {
+  display: none;
+}
+
+.micromodal-slide.is-open {
+  display: block;
 }
