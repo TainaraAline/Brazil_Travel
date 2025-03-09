@@ -3,6 +3,12 @@ $font-secondary: "Poppins", sans-serif;
 $color-primary: #375a44;
 $color-secondary: #ffc64f;
 
+@mixin breakpoint($size) {
+  @media screen and (min-width: #{$size}px) {
+    @content;
+  }
+}
+
 *,
 *::after,
 *::before {
@@ -14,7 +20,16 @@ $color-secondary: #ffc64f;
 html {
   font-family: $font-secondary;
   box-sizing: border-box;
-  font-size: 62.5%;
+
+  font-size: 50%; // 1rem = 8px
+
+  @include breakpoint(600) {
+    font-size: 56.25%; // 1rem = 9px
+  }
+
+  @include breakpoint(900) {
+    font-size: 62.5%; // 1rem = 10px
+  }
 }
 
 body {
@@ -34,8 +49,12 @@ body {
 
   &_logo {
     height: auto;
-    width: 40vh;
+    width: 35vh;
     margin-top: 2.5rem;
+
+    @include breakpoint(600) {
+      width: 40vh;
+    }
   }
 }
 
@@ -60,43 +79,97 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 8rem 4rem;
-  gap: 5rem;
+  padding: 4rem 2rem 6rem;
   background-image: url(../images/bg_yellow.svg);
+  gap: 5rem;
+
+  @include breakpoint(900) {
+    padding: 8rem 4rem;
+  }
 
   &_title {
     font-family: $font-primary;
     font-size: 5rem;
-    margin-bottom: 4rem;
     color: $color-primary;
+
+    @include breakpoint(900) {
+      margin-bottom: 4rem;
+    }
+  }
+
+  &_list {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 16vh;
+
+    @include breakpoint(900) {
+      gap: 5rem;
+    }
   }
 }
 
 .feature {
   display: flex;
+  flex-direction: column;
   align-items: center;
   // After some research, people are using overflow-x to hide a side effect created by using AOS lib
   overflow-x: hidden;
   gap: 3rem;
 
+  @include breakpoint(900) {
+    flex-direction: row;
+  }
+
   &_description {
     font-size: 1.6rem;
-    max-width: 60vw;
+    max-width: 80vw;
     color: $color-primary;
+    order: 2;
+
+    @include breakpoint(900) {
+      max-width: 60vw;
+      order: unset;
+    }
   }
 
   &_img {
-    height: 35vh;
+    width: 80vw;
+    height: auto;
+    order: 1;
+
+    @include breakpoint(600) {
+      width: 60vw;
+    }
+
+    @include breakpoint(900) {
+      height: 35vh;
+      max-width: none;
+      width: auto;
+      order: unset;
+    }
   }
 }
 
 .glide {
-  width: max-content;
+  width: 70vw;
   max-width: 50rem;
+
+  @include breakpoint(600) {
+    width: 50vw;
+  }
+
+  @include breakpoint(900) {
+    width: 30vw;
+  }
 
   &__slide {
     display: flex;
     justify-content: center;
+  }
+
+  &__arrows {
+    width: 100%;
   }
 
   &__arrow {
@@ -107,20 +180,14 @@ body {
     font-size: 1.8rem;
     cursor: pointer;
     border-radius: 5px;
-  }
 
-  &__bullet {
-    background-color: #ddd;
-    border: none;
-    width: 1.2rem;
-    height: 1.2rem;
-    border-radius: 50%;
-    margin: 5px;
-    cursor: pointer;
-  }
+    &--left {
+      left: -5.5rem;
+    }
 
-  &__bullet--active {
-    background-color: #333;
+    &--right {
+      right: -5.5rem;
+    }
   }
 
   &__card {
@@ -143,10 +210,18 @@ body {
   }
 
   &__image {
-    width: 30vw;
+    width: 70vw;
     height: 50vh;
     border-radius: 1rem;
     object-fit: cover;
+
+    @include breakpoint(600) {
+      width: 50vw;
+    }
+
+    @include breakpoint(900) {
+      width: 30vw;
+    }
   }
 }
 
