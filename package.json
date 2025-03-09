@@ -6,7 +6,8 @@
   "scripts": {
     "watch:sass": "sass public/assets/sass/main.scss public/assets/css/style.css -w",
     "start": "npm-run-all --parallel devserver watch:sass",
-    "devserver": "lite-server --baseDir=\"public\""
+    "devserver": "lite-server --baseDir=\"public\"",
+    "build": "sass public/assets/sass/main.scss public/assets/css/style.css"
   },
   "repository": {
     "type": "git",
