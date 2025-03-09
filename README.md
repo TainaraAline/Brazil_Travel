@@ -1,2 +1,3 @@
-# Brazil_Travel
+# Brazil Travel
+
 JS Libraries Assignment

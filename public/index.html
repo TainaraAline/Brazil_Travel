@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/@glidejs/glide@3.7.1/dist/css/glide.core.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/@glidejs/glide@3.7.1/dist/css/glide.theme.min.css"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="assets/css/style.css" />
+    <title>Brazil Travel</title>
+  </head>
+  <body>
+    <section class="hero">
+      <img src="" alt="brazil travel logo" />
+    </section>
+    <main class="destinations">
+      <h2 class="destinations_title">Destinations</h2>
+      <div class="glide">
+        <div class="glide__track" data-glide-el="track">
+          <ul class="glide__slides">
+            <li class="glide__slide">
+              <img
+                class="glide__image"
+                src="assets/images/brasilia 1.webp"
+                alt="Brasilia"
+              />
+            </li>
+            <li class="glide__slide">
+              <img
+                class="glide__image"
+                src="assets/images/carnaval 2.jpg"
+                alt="Brasilia"
+              />
+            </li>
+            <li class="glide__slide">
+              <img
+                class="glide__image"
+                src="assets/images/floripa 2.jpg"
+                alt="Brasilia"
+              />
+            </li>
+          </ul>
+        </div>
+        <div class="glide__arrows" data-glide-el="controls">
+          <button class="glide__arrow glide__arrow--left" data-glide-dir="<">
+            prev
+          </button>
+          <button class="glide__arrow glide__arrow--right" data-glide-dir=">">
+            next
+          </button>
+        </div>
+      </div>
+      <p class="destinations_hint">Click to expand</p>
+    </main>
+    <section class="contact">
+      <form action="">
+        <div class="input_container">
+          <input type="text" class="input" id="name" />
+          <label for="name" class="input_label">name</label>
+        </div>
+      </form>
+    </section>
+    <script src="https://cdn.jsdelivr.net/npm/@glidejs/glide"></script>
+    <script>
+      new Glide(".glide", {
+        type: "carousel",
+      }).mount();
+    </script>
+    <!-- <script src="./assets/js/main.js"></script> -->
+  </body>
+</html>
