@@ -48,8 +48,27 @@ document.addEventListener("DOMContentLoaded", async function () {
     // Micromodal initialization
     MicroModal.init();
 
+    const { formatDate } = window.cleaveZen
+
+    const startDateInput = document.querySelector("#start_date")
+    const endDateInput = document.querySelector("#end_date")
+    
+    startDateInput.addEventListener('input', e => {
+        startDateInput.value = formatDate(e.target.value, {
+            datePattern: ["d", "m", "y"]
+        })
+    })
+
+    endDateInput.addEventListener('input', e => {
+        endDateInput.value = formatDate(e.target.value, {
+            datePattern: ["d", "m", "y"]
+        })
+    })
+    
     // Prevent the normal actions of form
-    document.querySelector("form").addEventListener('submit', (event) => {
+    document.querySelector(".contact_form").addEventListener('submit', (event) => {
         event.preventDefault()
+
+        MicroModal.show('modal')
     })
 });
