@@ -1,6 +1,6 @@
 # Brazil Travel - Frontend Project
 
-[![Brazil Travel Banner](banner.PNG)](https://tainaraaline.github.io/Brazil_Travel/)
+[![Brazil Travel Banner](./banner.png)](https://tainaraaline.github.io/Brazil_Travel/)
 
 Welcome to **Brazil Travel**, a frontend project created for an assignment at Seneca College. This project showcases an interactive web experience for travelers interested in exploring Brazil.
 
