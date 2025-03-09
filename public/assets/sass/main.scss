@@ -1,5 +1,7 @@
 $font-primary: "Bebas Neue", sans-serif;
 $font-secondary: "Poppins", sans-serif;
+$color-primary: #375a44;
+$color-secondary: #ffc64f;
 
 *,
 *::after,
@@ -18,7 +20,7 @@ html {
 body {
   min-height: 100vh;
   display: grid;
-  grid-template-rows: 85vh 100vh max-content;
+  grid-template-rows: 90vh 100vh 1fr max-content;
 }
 
 .hero {
@@ -27,8 +29,14 @@ body {
   background-position: center;
   display: flex;
   height: 100%;
-  align-items: center;
+  align-items: flex-start;
   justify-content: center;
+
+  &_logo {
+    height: auto;
+    width: 40vh;
+    margin-top: 2.5rem;
+  }
 }
 
 .destinations {
@@ -36,11 +44,47 @@ body {
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  background-image: url(../images/bg_green.svg);
+  background-repeat: no-repeat;
+  background-size: cover;
 
   &_title {
     font-family: $font-primary;
     font-size: 5rem;
     margin-bottom: 4rem;
+    color: $color-secondary;
+  }
+}
+
+.features {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 8rem 4rem;
+  gap: 5rem;
+  background-image: url(../images/bg_yellow.svg);
+
+  &_title {
+    font-family: $font-primary;
+    font-size: 5rem;
+    margin-bottom: 4rem;
+    color: $color-primary;
+  }
+}
+
+.feature {
+  display: flex;
+  align-items: center;
+  gap: 3rem;
+
+  &_description {
+    font-size: 1.6rem;
+    max-width: 60vw;
+    color: $color-primary;
+  }
+
+  &_img {
+    height: 35vh;
   }
 }
 
@@ -55,7 +99,7 @@ body {
 
   &__arrow {
     background: rgba(0, 0, 0, 0.5);
-    color: white;
+    color: $color-secondary;
     border: none;
     padding: 10px 15px;
     font-size: 18px;
@@ -78,21 +122,22 @@ body {
   }
 
   &__card {
-    background-color: #fff;
     position: relative;
   }
 
   &__card-title {
-    font-family: $font-primary;
-    font-size: 2rem;
+    font-family: $font-secondary;
+    font-size: 1rem;
     position: absolute;
     bottom: 2rem;
     left: 50%;
     transform: translateX(-50%);
     text-align: center;
-    background-color: rgba(255, 255, 255, 0.6);
+    background-color: $color-secondary;
+    color: $color-primary;
     padding: 0.6rem 3rem;
     clip-path: polygon(10% 0, 0 100%, 90% 100%, 100% 0);
+    white-space: nowrap;
   }
 
   &__image {
@@ -108,6 +153,10 @@ body {
   flex-direction: column;
   align-items: center;
   padding: 6rem 2rem;
+  background-image: url(../images/bg_green.svg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: $color-secondary;
 
   &_title {
     font-family: $font-primary;
@@ -132,6 +181,7 @@ body {
   border-radius: 0.4rem;
   padding: 0.6rem 1.2rem;
   font-size: 1.6rem;
+  background-color: #ffe6ae;
 
   &_container {
     display: flex;
@@ -146,12 +196,13 @@ body {
 
 .btn {
   border: none;
-  background-color: green;
+  background-color: $color-secondary;
   padding: 0.6rem 1rem;
   font-size: 2rem;
   cursor: pointer;
   transition: all 0.4s ease;
-  border-radius: 999rem;
+  border-radius: 0.4rem;
+  color: $color-primary;
 
   &:hover {
     transform: translateY(-0.2rem);
@@ -179,7 +230,7 @@ body {
   }
 
   &_content {
-    background-color: #fff;
+    background-color: $color-primary;
     padding: 3rem;
     border-radius: 4px;
     position: relative;

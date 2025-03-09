@@ -23,18 +23,7 @@ async function addCarouselImages(){
             </div>
         `
 
-        // const img = document.createElement('img')
-        // img.classList.add('glide__image')
-        // img.src = `/assets/images/${image.file}`
-        // img.alt = image.name
-
-        // item.appendChild(img)
         carouselUl.appendChild(item)
-
-        // const bullet = document.createElement('button')
-        // bullet.classList.add('glide__bullet')
-        // bullet.dataset.glideDir = `=${index}`
-        // bulletContainer.appendChild(bullet)
     })
 }
 
