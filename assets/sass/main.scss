@@ -1,14 +1,18 @@
+// Important variables
 $font-primary: "Bebas Neue", sans-serif;
 $font-secondary: "Poppins", sans-serif;
+
 $color-primary: #375a44;
 $color-secondary: #ffc64f;
 
+// Mixin to easily add responsiveness
 @mixin breakpoint($size) {
   @media screen and (min-width: #{$size}px) {
     @content;
   }
 }
 
+// CSS Reset
 *,
 *::after,
 *::before {
@@ -38,6 +42,7 @@ body {
   grid-template-rows: 90vh 100vh 1fr max-content;
 }
 
+// Hero section
 .hero {
   background-image: url(../images/cover\ RJ.webp);
   background-size: cover;
@@ -58,6 +63,7 @@ body {
   }
 }
 
+// Destinations - Where the Carousel is located
 .destinations {
   display: flex;
   flex-direction: column;
@@ -75,6 +81,7 @@ body {
   }
 }
 
+// The section with animated cards
 .features {
   display: flex;
   flex-direction: column;
@@ -151,6 +158,7 @@ body {
   }
 }
 
+// Css additions to the glide classes
 .glide {
   width: 70vw;
   max-width: 50rem;
@@ -225,6 +233,7 @@ body {
   }
 }
 
+// Last section with contact
 .contact {
   display: flex;
   flex-direction: column;
@@ -292,6 +301,7 @@ body {
   }
 }
 
+// The success modal
 .modal {
   &_overlay {
     position: fixed;
