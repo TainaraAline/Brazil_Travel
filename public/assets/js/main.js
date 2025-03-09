@@ -9,7 +9,6 @@ async function getCarouselImages() {
 // This one is to effectively add the images
 async function addCarouselImages(){
     const carouselUl = document.querySelector(".glide__slides")
-    // const bulletContainer = document.querySelector(".glide__bullets")
 
     const images = await getCarouselImages()
 
@@ -48,6 +47,7 @@ document.addEventListener("DOMContentLoaded", async function () {
     // Micromodal initialization
     MicroModal.init();
 
+    // Setting up Cleave Zen input format
     const { formatDate } = window.cleaveZen
 
     const startDateInput = document.querySelector("#start_date")
