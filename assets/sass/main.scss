@@ -160,20 +160,28 @@ body {
 
 // Css additions to the glide classes
 .glide {
-  width: 70vw;
-  max-width: 50rem;
+  width: 65vw;
+  max-width: 80rem;
 
   @include breakpoint(600) {
-    width: 50vw;
+    width: 70vw;
   }
 
-  @include breakpoint(900) {
-    width: 30vw;
+  @include breakpoint(1200) {
+    width: 60vw;
   }
 
   &__slide {
     display: flex;
     justify-content: center;
+    overflow: hidden;
+    border-radius: 1rem;
+    height: 50vh;
+    width: 100%;
+
+    @include breakpoint(1200) {
+      height: 65vh;
+    }
   }
 
   &__arrows {
@@ -200,6 +208,7 @@ body {
 
   &__card {
     position: relative;
+    width: 100%;
   }
 
   &__card-title {
@@ -218,18 +227,9 @@ body {
   }
 
   &__image {
-    width: 70vw;
-    height: 50vh;
-    border-radius: 1rem;
+    height: 100%;
+    width: 100%;
     object-fit: cover;
-
-    @include breakpoint(600) {
-      width: 50vw;
-    }
-
-    @include breakpoint(900) {
-      width: 30vw;
-    }
   }
 }
 

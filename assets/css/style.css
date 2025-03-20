@@ -143,22 +143,31 @@ body {
 }
 
 .glide {
-  width: 70vw;
-  max-width: 50rem;
+  width: 65vw;
+  max-width: 80rem;
 }
 @media screen and (min-width: 600px) {
   .glide {
-    width: 50vw;
+    width: 70vw;
   }
 }
-@media screen and (min-width: 900px) {
+@media screen and (min-width: 1200px) {
   .glide {
-    width: 30vw;
+    width: 60vw;
   }
 }
 .glide__slide {
   display: flex;
   justify-content: center;
+  overflow: hidden;
+  border-radius: 1rem;
+  height: 50vh;
+  width: 100%;
+}
+@media screen and (min-width: 1200px) {
+  .glide__slide {
+    height: 65vh;
+  }
 }
 .glide__arrows {
   width: 100%;
@@ -180,6 +189,7 @@ body {
 }
 .glide__card {
   position: relative;
+  width: 100%;
 }
 .glide__card-title {
   font-family: "Poppins", sans-serif;
@@ -196,20 +206,9 @@ body {
   white-space: nowrap;
 }
 .glide__image {
-  width: 70vw;
-  height: 50vh;
-  border-radius: 1rem;
+  height: 100%;
+  width: 100%;
   object-fit: cover;
-}
-@media screen and (min-width: 600px) {
-  .glide__image {
-    width: 50vw;
-  }
-}
-@media screen and (min-width: 900px) {
-  .glide__image {
-    width: 30vw;
-  }
 }
 
 .contact {
